@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'style.css' %}" />
+<link rel="stylesheet" href="{% static 'star.css' %}" />
+
+<style>
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    height: 640px;
+    background: #23242a;
+    overflow: hidden; /* Dodaj overflow dla przewijania */
+  }
+
+  .form {
+    text-align: left; /* Tekst wyrównany do lewej */
+    background-color: #0c2c47;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #45f3ff;
+    width: 100%;
+    overflow-y: scroll; /* Dodaj przewijanie w pionie */
+    max-height: 70vh; /* Ogranicz maksymalną wysokość dla suwaka przewijania */
+  }
+
+  .form h1 {
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  .form ol {
+    padding-left: 20px; /* Dodaj wcięcie dla numeracji */
+  }
+
+  .form li {
+    font-size: 15px;
+    margin-bottom: 10px; /* Dodaj odstęp między podpunktami */
+    list-style: decimal; /* Numeracja podpunktów */
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links a {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #8f8f8f;
+    text-decoration: none;
+  }
+
+  .links a:hover,
+  .links a:nth-child(2) {
+    color: #45f3ff;
+  }
+
+  input[type="submit"] {
+    border: none;
+    outline: none;
+    background-color: #45f3ff;
+    padding: 13px 25px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  input[type="submit"]:active {
+    opacity: 0.8;
+  }
+</style>
+
+<div class="box">
+  <div class="form">
+    <h1><a href="{% url 'home' %}" style="text-decoration: none; color: inherit;">Mikefy - Terms of Use</a></h1>
+    <hr>
+    <br>
+    <p><strong>Last Updated:</strong> 19.10.2023</p>
+    <br>
+    <ol>
+      <li><strong>Acceptance of Terms</strong><br>
+        By using this website, you agree to abide by these terms of use. Please read and understand this document before browsing the content of the website.</li>
+      <li><strong>Copyright</strong><br>
+        All materials, content, graphics, and other resources on this website are protected by copyright law. Use without the owner's consent is prohibited.</li>
+      <li><strong>User Comments and Submissions</strong><br>
+        We reserve the right to moderate and remove user-submitted content, comments, or publications that are offensive, inappropriate, or in violation of the law.</li>
+      <li><strong>Data Protection</strong><br>
+        Personal data submitted to us through forms or other channels is protected in accordance with our Privacy Policy.</li>
+      <li><strong>Cookies</strong><br>
+        This website uses cookies to enhance your browsing experience. You can manage cookie settings in your browser.</li>
+      <li><strong>Liability</strong><br>
+        We are not liable for any losses or damages incurred from using this website.</li>
+      <li><strong>Changes to the Terms</strong><br>
+        We reserve the right to change these terms of use at any time. Changes will be posted on the website.</li>
+      <li><strong>Contact</strong><br>
+        For questions, comments, or issues, please contact us using the information provided on the website's "Contact" section.</li>
+      <li><strong>Governing Law</strong><br>
+        These terms of use are subject to the laws of Poland, and any disputes arising from the use of this website will be resolved by the appropriate court.</li>
+    </ol>
+    <br>
+    <div class="links">
+      <a href="{% url 'register' %}">Back to register</a>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'app3D.js' %}"></script>
+{% endblock %}
