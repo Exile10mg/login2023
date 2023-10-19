@@ -129,9 +129,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.titan.email'  # Adres SMTP Titan Mail
 EMAIL_PORT = 587  # Port SMTP Titan Mail (587 z TLS lub 465 z SSL)
 EMAIL_USE_TLS = True  # Używaj TLS (lub SSL, w zależności od portu)
-EMAIL_HOST_USER = 'kontakt@borem.pl'  # Twój użytkownik SMTP Titan Mail
-EMAIL_HOST_PASSWORD = 'Pulawiak1.'  # Twoje hasło SMTP Titan Mail
-DEFAULT_FROM_EMAIL = 'kontakt@borem.pl'  # Adres e-mail, który będzie używany jako "Od" w wiadomościach
+EMAIL_HOST_USER = '#'  # Twój użytkownik SMTP Titan Mail
+EMAIL_HOST_PASSWORD = '#'  # Twoje hasło SMTP Titan Mail
+DEFAULT_FROM_EMAIL = '#'  # Adres e-mail, który będzie używany jako "Od" w wiadomościach
 
 # Jeśli potrzebujesz autoryzacji, możesz również podać użytkownika i hasło do serwera SMTP
 #EMAIL_USE_AUTH = True
