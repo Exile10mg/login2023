@@ -1,5 +1,4 @@
-# django-login-page
-
+# Login form - Django 2023
 login: admin
 password: admin
 
